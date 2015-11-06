@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 				//printf("::%d\n", pop());
 				break;
 			case FUN:
-				printf("function found %s\n", *argv);
+				//printf("function found %s\n", *argv);
 				break;
 			case ADD:
 				push(pop() + pop());
