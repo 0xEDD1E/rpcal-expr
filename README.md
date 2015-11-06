@@ -1,4 +1,6 @@
 # rpcal-expr
+
+# expr v1.0
 Reverse Polish calculator (in command line arguments mode)
 
 This is a reverse polish calculator
@@ -22,3 +24,17 @@ Special Notes:
   >this program can't use (*) as multiply sign in windows or linux
   >and also (/) as the division sign in linux (in bash shell)
 
+# expr v2.0
+Added the ability to use mathematical functions 
+currently user can use SIN (sine), COS (cosine), TAN (tangent).
+usage (example)
+ > ./expr2 3 SIN
+ 
+will give the output
+ > OUTPUT : 0.141120
+
+and also if  'expr2' recieved 'ABOUT' as a function, It'll print
+ > expr v2.0
+ > OUTPUT : 0.000000
+ 
+ #END-OF-README
