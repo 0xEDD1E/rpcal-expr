@@ -14,7 +14,8 @@ as an example
  > expr 2 3 4 + x
  
 evaluate the expression
- > 2 x (3 + 4) \
+ > 2 x (3 + 4) 
+ 
  > OUTPUT: 14.000000
  
 Special Notes:
