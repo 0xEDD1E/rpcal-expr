@@ -8,7 +8,7 @@ It was written as an answer to a exrecise in K&R's "The C Programming Language" 
 
 program name is "expr"
 Using expr:
- > expr <NUM1> <NUM2> ... <+-x/> <+-x/> ... 
+ > expr [NUM1] [NUM2] ... [+-x/] [+-x/] ... 
 
 as an example
  > expr 2 3 4 + x
