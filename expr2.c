@@ -12,8 +12,9 @@
 #define FAILURE 1
 #define MAXNUMS 100
 
-int getop(char *s);
-void push(double val);
+int getop(char *);
+double funcpop(char *);
+void push(double);
 double pop(void);
 
 int main(int argc, char *argv[])
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
 	int c;
 	int type, op2;
 	
-	if (argc > 3) {
+	if (argc > 2) {
 		while((--argc > 0) && (type = getop(*++argv)))  {
 			//printf("%s", *argv);
 			
@@ -31,7 +32,8 @@ int main(int argc, char *argv[])
 				//printf("::%d\n", pop());
 				break;
 			case FUN:
-				printf("function found %s\n", *argv);
+				push(funcpop(*argv));
+				//printf("function found %s\n", *argv);
 				break;
 			case ADD:
 				push(pop() + pop());
@@ -58,7 +60,7 @@ int main(int argc, char *argv[])
 			
 		}
 	} else {
-		printf("USAGE: expr <num1> <num2> <num3> ... <+-x/> <+-x/> ...\n");
+		printf("USAGE: expr [NUM1] [NUM2]... [+-x/ | FUNC]...\n");
 		return FAILURE;
 	}
 	
@@ -66,6 +68,26 @@ int main(int argc, char *argv[])
 	printf("OUTPUT : %.6f\n", pop());
 	
 	return SUCCESS;
+}
+
+#include <math.h>
+
+double funcpop(char *func)
+{
+	double res = 0;
+	
+	if (strcmp(func, "SIN") == 0)
+		res = sin(pop());
+	else if (strcmp(func, "COS") == 0)
+		res = cos(pop());
+	else if (strcmp(func, "TAN") == 0)
+		res = tan(pop());
+	else if (strcmp(func, "ABOUT") == 0)
+		printf("expr v2.0\n");
+	else
+		printf("Unknown function recieved.\n");
+	
+	return res;
 }
 
 #include <ctype.h>
