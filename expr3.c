@@ -93,7 +93,7 @@ double funcpop(char *func)
 	else if (strcmp(func, "SQRT") == 0)
 		res = sqrt(pop());
 	else if (strcmp(func, "ABOUT") == 0)
-		printf("expr v2.0\n");
+		printf("expr v2.1\n");
 	else
 		printf("Unknown function recieved.\n");
 	
