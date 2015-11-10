@@ -37,5 +37,27 @@ and also if  'expr2' recieved 'ABOUT' as a function, It'll print
  > expr v2.0
  > OUTPUT : 0.000000
  
+Supported functions for expr v2.0
+> SIN
+> COS
+> TAN
+> ABOUT - about expr 
+
+# expr v2.1
+Added new mathematical functions
+Rest is untouched.
+
+Supported functions for expr v2.1
+> SIN
+> COS
+> TAN
+> SINH
+> COSH
+> TANH
+> EXP
+> SQRT
+> ABOUT - about expr
+
+
  
  #END-OF-README
